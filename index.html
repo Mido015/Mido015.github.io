@@ -3,6 +3,8 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>Midhat | Web Developer</title>
 	
@@ -10,7 +12,7 @@
 <body>
 	
 		
-	
+
 <div class="navbar">
 		<nav>
 			<ul>
@@ -18,22 +20,24 @@
 				<li><a href="#about">about</a></li>
 				<li><a href="#work">work</a></li>
 				<li><a href="#contact">contact</a></li>
-				<li><a href="#theme">too bright?</a></li>
+				<li class="theme"><a href="logo"><img src="moon.png" alt="theme"></a></li>
 			</ul>
 		</nav>
 
 </div>
-
-	<a href="logo"><img src="favicon.ico" alt="logo"></a>
-		<a href="github"><img src="github.png" alt="github"></a>
+<div class="whole">
+<div class="logo">
+	 <a href="logo"><img src="favicon.ico" alt="logo"></a>
+	<!--	<a href="github"><img src="github.png" alt="github"></a>
 		<a href="linkedin"><img src="linkedin.png" alt="linkedin"></a>
 		<a href="codepen"><img src="codepen.png" alt="codepen"></a>
-
-	<div>
-		<h1>Hello there, I'm Mido!</h1>
-		<p>I’m a front-end developer who loves building user-friendly websites and web apps, enjoys UI/UX design and loves helping people.
-		Most recently, I’ve been creating 3d models using Blender and AutoCAD </p>
-		<h2>I'm also learning about...</h2>
+-->
+</div>
+	<div class="bullet">
+		<h1 class="myName">Hello there, I'm Mido!</h1>
+		<p class="firstP">I’m a front-end developer who loves building user-friendly websites and web apps,<br> enjoys UI/UX design and loves helping people.
+		Most recently, I’ve been creating<br> 3d models using Blender and AutoCAD </p>
+		<h2 class="learning">I'm also learning about...</h2>
 		<ul>
 			<li>Data Science and Machine Learning</li>
 			<li>Logo design and Branding</li>
@@ -64,59 +68,113 @@
 			<input type="submit" value="Submit" id="input-submit">
 		</form>
 	</div>
-
+</div>
 </body>
 </html>
 
 
 <style type="text/css">
 	body {
-		border: 8px solid #ff9d94;
+		color: #443d3d;
+	  font-family: 'Baloo 2', cursive;
+	  font-size: 24px;
+		border: 8px solid #ff9d94; 
 		background-color: #f3f0f0;
 		 -ms-overflow-style: none; 
-    scrollbar-width: none;
-    overflow-y: scroll; 
+	scrollbar-width: none;
+	overflow-y: scroll; 
 	}
 	body::-webkit-scrollbar {
-    display: none;
+	display: none;
 } 
 
-	
+	.myName {
+		font-size: 82px;
+		font-family: lato;
+		font-weight: bold;
+		color: #1d314c;
+		margin-top: 5%;
+	}
+	.learning {
+		color: #1d314c;
+		font-weight: bold;
+	}
+	.firstP {
+
+	}
+
+	.theme {
+		
+	}
+	.logo {
+		margin: 10px;
+	}
+	.whole {
+		margin: 10%;
+		margin-top: 3%;
+	}
+
+	.bullet ul li {
+  list-style: none;
+}
+.bullet ul li::before {
+  content: "\2022";
+  color: #ff6f61;
+  font-weight: bold;
+  
+  display: inline-block; 
+  width: 16px;
+  margin-left: -16px;
+}
 	
 .navbar {
+	
 	background-color:#f3f0f0 ;
-	box-shadow:         0px -10px 30px 0px rgba(50, 50, 50, 0.2);
-	overflow: hidden;
+	box-shadow:  0px -10px 30px 0px rgba(50, 50, 50, 0.2);
   position: fixed;
-  bottom: -16px;
+  bottom: -20px;
   width: 484px;
+
+}
+
+ a:hover {
+	text-decoration: none;
+	color:#ff9d94 ;
+}
   
 
-}
+
  nav ul {
-    width:100%;
-    margin: 0px;
-    padding:0;
-    list-style:none;
-    text-align:center;
+	width:100%;
+	margin: 0px;
+	padding:0px;
+	list-style:none;
+	text-align:center;
 
 
-    
+	
 }
 nav li { 
-    display:inline-block;
-    width:20%;
-    margin:0;
-    padding:px;
+	display:inline-block;
+	width:20%;
+	margin:0;
+	padding:15px;
+	
 
-    
-    
+	
+	
 }
 nav a {
-    text-align:center;
-    margin:0; 
-    display:block;
-    
+	text-align:center;
+	margin:0; 
+	display:block;
+	color: #1d314c;
+	font-weight: bold;
+	
+
+  
+	
 }
 
 </style>
+
