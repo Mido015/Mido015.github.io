@@ -47,25 +47,25 @@
 	</div>
 	<div>
 		<h2>WORK</h2>
-		<h1>Malcolm X</h1>
+		<h1 class="work">Malcolm X</h1>
 		<h5>#Front-end</h5>
-		<p><a href="url">My first webpage</a> I built when I was 16 years old, learning about web design, web development, mobile responsive pages and much more.</p>
-		<h1>Portfolio</h1>
+		<p class="link"><a href="url">My first webpage</a> I built when I was 16 years old, learning about web design,<br> web development, mobile responsive pages and much more.</p>
+		<h1 class="work">Portfolio</h1>
 		<h5>#Full-stack #Bootstrap #jQuery #JavaScript</h5>
 		<p><a href="url">My first portfolio website</a> I also made when I was 16, learning more about web development, Bootstrap, jQuery, JavaScript, animations some back-end programming and other cool stuff.</p>
-		<h1>3d modelling and Mechanical drawing</h1>
+		<h1 class="work">3d modelling and Mechanical drawing</h1>
 		<h5>#Blender #AutoCAD </h5>
 		<p>I made various <a href="url">3d models</a> over time, mainly focusing on mechanical drawings using AutoCAD and some models using Blender</p>
 	</div>
 	<h3>GET IN TOUCH</h3>
 	<h1>Say Hello!</h1>
-	<p>If you’d like to send me a message, I can be reached through various ways! If you prefer email, simply fill out the form below or send me a message directly at mido_husic@hotmail.com</p>
+	<p>If you’d like to send me a message, I can be reached through various ways! If you prefer email, simply fill out the form below or send me a message directly at <b>mido_husic@hotmail.com</b></p>
 	<div>
 		<form>
-			<input type="text" id="input-name" placeholder="Name">
+			<input type="text" id="input-name" class="sender-name" placeholder="Name">
 			<input type="email" id="input-email" placeholder="Email address">
-			<textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
-			<input type="submit" value="Submit" id="input-submit">
+			<textarea name="message" rows="5" cols="33" type="text" id="input-message" placeholder="Message"></textarea>
+			<input class="button" type="submit" value="Submit"  id="input-submit">
 		</form>
 	</div>
 </div>
@@ -102,7 +102,46 @@
 	.firstP {
 
 	}
-
+	.work {
+		font-family: lato;
+		font-weight: bold;
+		font-size: 41px;
+		color: #1d314c;
+	}
+	h5 {
+		font-family: cursive;
+		font-weight: bold;
+		color:#ff6f61 ;
+	}
+	 a:link {
+color:#1d314c ;
+font-weight: bold;
+	}
+	input {
+		display: block;
+		margin-top: 30px;
+		color: #443d3d;
+		background: #e5dfde;
+		border: none;
+	}
+	textarea {
+		display: block;
+		margin-top: 30px;
+		color: #443d3d;
+		background: #e5dfde;
+		border: none;
+		resize: none;
+	}
+	.sender-name {
+		color: #443d3d;
+		background: #e5dfde;
+		border: none;
+	}
+	.button {
+		font-weight: bold;
+		color: #1d314c;
+	}
+	 
 	.theme {
 		
 	}
