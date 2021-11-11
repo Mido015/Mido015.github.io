@@ -1,0 +1,153 @@
+<style type="text/css">
+	body {
+		color: #443d3d;
+	  font-family: 'Baloo 2', cursive;
+	  font-size: 24px;
+		border: 8px solid #ff9d94; 
+		background-color: #f3f0f0;
+		 -ms-overflow-style: none; 
+	scrollbar-width: none;
+	overflow-y: scroll; 
+	}
+	body::-webkit-scrollbar {
+	display: none;
+} 
+
+	.myName {
+		font-size: 82px;
+		font-family: lato;
+		font-weight: bold;
+		color: #1d314c;
+		margin-top: 5%;
+	}
+	.learning {
+		color: #1d314c;
+		font-weight: bold;
+	}
+	.firstP {
+
+	}
+	.work {
+		font-family: lato;
+		font-weight: bold;
+		font-size: 41px;
+		color: #1d314c;
+	}
+	h5 {
+		font-family: cursive;
+		font-weight: bold;
+		color:#ff6f61 ;
+	}
+	 a:link {
+color:#1d314c ;
+font-weight: bold;
+	}
+	input {
+		display: block;
+		margin-top: 30px;
+		color: #443d3d;
+		background: #e5dfde;
+		border: none;
+	}
+	textarea {
+		display: block;
+		margin-top: 30px;
+		color: #443d3d;
+		background: #e5dfde;
+		border: none;
+		resize: none;
+	}
+	.sender-name {
+		color: #443d3d;
+		background: #e5dfde;
+		border: none;
+	}
+	.button {
+		font-weight: bold;
+		color: #1d314c;
+	}
+	 
+	.theme {
+		
+	}
+	.logo {
+		margin: 10px;
+	}
+	.whole {
+		margin: 10%;
+		margin-top: 3%;
+	}
+
+	.bullet ul li {
+  list-style: none;
+}
+.bullet ul li::before {
+  content: "\2022";
+  color: #ff6f61;
+  font-weight: bold;
+  
+  display: inline-block; 
+  width: 16px;
+  margin-left: -16px;
+}
+	@media (max-width: 767px) {
+
+  }
+@media (max-width: 575px) {
+.theme {
+	display: none;
+
+}
+.logo {
+	display: none;
+}
+
+.navbar {
+	
+	background-color:#f3f0f0 ;
+	box-shadow:  0px -10px 30px 0px rgba(50, 50, 50, 0.2);
+  position: fixed;
+  bottom: -20px;
+  width: 97%;
+  
+  }
+}
+
+ a:hover {
+	text-decoration: none;
+	color:#ff9d94 ;
+}
+  
+
+
+ nav ul {
+	width:100%;
+	margin: 0px;
+	padding:0px;
+	list-style:none;
+	text-align:center;
+
+
+	
+}
+nav li { 
+	display:inline-block;
+	width:19%;
+	margin:0;
+	padding:15px;
+	
+
+	
+	
+}
+nav a {
+	text-align:center;
+	margin:0; 
+	display:block;
+	color: #1d314c;
+	font-weight: bold;
+	
+
+
+</style>
+
