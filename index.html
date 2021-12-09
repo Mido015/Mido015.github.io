@@ -1,163 +1,195 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<meta charset="UTF-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>Midhat | Web Developer</title>
 	
+	
 </head>
 <body>
+	
+	<label  id="dark-change"></label>
 
-<script src="script.js" type="text/javascript">
-
-	function ShowMessage() {
-    alert("Hello World!");
-}
-
-
-        var content = document.getElementsByTagName('body')[0];
-        var darkMode = document.getElementById('dark-change');
-        darkMode.addEventListener('click', function(){
-            darkMode.classList.toggle('active');
-            content.classList.toggle('night');
-        })
-   
-
-	/*const toggleTheme = () => {
-	const container = document.getElementById('page');
-	container.classList.toggle("dark-theme");
-
-	const theme = localStorage.getItem("theme");
-	if (theme === "light" || null) {
-		console.log("set theme to light");
-		localStorage.setItem("theme", "dark");
-
-	}
-	else if (theme = "dark") {
-		localStorage.setItem("theme", "light");
-	}
-
-}
-
-	window.addEventListener("load", () => {
-		const theme = localStorage.getItem("theme");
-
-		if (theme === null) {
-			localStorage.setItem("theme", "light");
-		}
-		if (theme === "dark") {
-			const container = document.getElementById("page");
-			container.classList.add("dark-theme");
+	<script>
+		
+		var content = document.getElementsByTagName('body')[0];
+		var darkMode = document.getElementById('dark-change');
+		darkMode.addEventListener('click', function(){
+			darkMode.classList.toggle('active');
+			content.classList.toggle('night');
 			
+		})
+		//focusin event
+		function inFocus(x) {
+			x.style.background = "lightpink";
 		}
-	}
 
-*/
-</script>
-	
-	<div class="page" id="page">
-	
+		$(document).ready(function(){
 
-<div class="navbar">
+
+			$('body').css('display', 'none');
+			$('body').fadeIn(2000);
+
+		});
+
+		var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+	</script>
+
+	<div>
 		<nav>
 			<ul>
+
 				<li><a class="logo" href="logo"><img src="favicon.ico" alt="logo"></a></li>
 				<li><a href="#about">about</a></li>
 				<li><a href="#work">work</a></li>
 				<li><a href="#contact">contact</a></li>
-				<li><button id="dark-change" class="button" onclick="ShowMessage()"  href="logo"><img src="moon.png" alt="theme"> too bright?</button></li>
+				<li><span class="span1"  href="logo"> too bright?</span></li>
 
 			</ul>
 		</nav>
-</div>
-</div>
+
+	</div>
 </div>
 <div class="whole">
-<div class="logo">
-	 
-	<!--	<a href="github"><img src="github.png" alt="github"></a>
+	<div class="logo">
+	 <!--
+		<a href="github"><img src="github.png" alt="github"></a>
 		<a href="linkedin"><img src="linkedin.png" alt="linkedin"></a>
 		<a href="codepen"><img src="codepen.png" alt="codepen"></a>
--->
+	-->
 </div>
-	<div class="bullet">
-		<h1 id="about" class="myName">Hello there, I'm Mido!</h1>
-		<div class="parent">
-			<div class="child1">
+<div class="bullet fadein">
+	<h1 id="about" class="myName">Hello there, I'm Mido!</h1>
+	<div class="parent">
+		<div class="child1">
 			<img style="border-radius: 25px;" src="portret.jfif">
 		</div>
 		
-			
-	<div class="progress child2">
+		<div class="progress child2">
 
-  <div class="progress-bar" role="progressbar" style="background: purple; width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">Python</div>
-</div>
-<div class="progress child2">
-  <div class="progress-bar" role="progressbar" style="background:  #b3b300; width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Javascript</div>
-</div>
-<div class="progress child2">
-  <div class="progress-bar" role="progressbar" style="background: orange; width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Java</div>
-</div>
-<div class="progress child2">
-  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
-</div>
-<div class="progress child2">
-  <div class="progress-bar" role="progressbar" style="background: darksalmon;width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML</div>
-</div>
+			<div class="progress-bar" role="progressbar" style="background: purple; width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">Python</div>
+		</div>
+		<div class="progress child2">
+			<div class="progress-bar" role="progressbar" style="background:  #b3b300; width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Javascript</div>
+		</div>
+		<div class="progress child2">
+			<div class="progress-bar" role="progressbar" style="background: orange; width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Java</div>
+		</div>
+		<div class="progress child2">
+			<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
+		</div>
+		<div class="progress child2">
+			<div class="progress-bar" role="progressbar" style="background: darksalmon;width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML</div>
+		</div>
 
 		<p class="firstP"><br>I’m a front-end developer who loves building user-friendly websites and web apps,<br> enjoys UI/UX design and loves helping people.
-		Most recently, I’ve been creating<br> 3d models using Blender and AutoCAD </p>
-		<h2 class="learning">I'm also learning about...</h2>
-		<ul>
-			<li>Data Science and Machine Learning</li>
-			<li>Logo design and Branding</li>
-			<li>3d Modeling and Sculpting</li>
-			<li>AutoCAD and Mechanical drawing</li>
-		</ul>  
-	</div>
-	<div>
-		<h2 id="work">WORK</h2>
-		<h1 class="work">Malcolm X</h1>
-		<h5>#Front-end</h5>
-		<p class="link"><a href="https://codepen.io/Mido015/pen/yVxzeQ" target="_blank">My first webpage</a> I built when I was 16 years old, learning about web design,<br> web development, mobile responsive pages and much more.</p>
-		<h1 class="work">Portfolio</h1>
-		<h5>#Full-stack #Bootstrap #jQuery #JavaScript</h5>
-		<p><a href="https://codepen.io/Mido015/pen/yXgrya" target="_blank">My first portfolio website</a> I also made when I was 16, learning more about web development, Bootstrap, jQuery, JavaScript, animations some back-end programming and other cool stuff.</p>
-		<h1 class="work">3d modelling and Mechanical drawing</h1>
-		<h5>#Blender #AutoCAD </h5>
-		<p>I made various <img class="" src="">3d models</a> over time, mainly focusing on mechanical drawings using AutoCAD and some models using Blender</p>
-	</div>
-	<h3>GET IN TOUCH</h3>
-	<div class="background">
-	<h1 id="contact">Say Hello!</h1>
-	<p>If you’d like to send me a message, I can be reached through various ways! If you prefer email, simply fill out the form below or send me a message directly at <b>mido_husic@hotmail.com</b></p>
-	<div>
-		<form>
-			<input type="text" id="input-name" class="sender-name" placeholder="Name">
-			<input type="email" id="input-email" placeholder="Email address">
-			<textarea name="message" rows="5" cols="33" type="text" id="input-message" placeholder="Message"></textarea>
-			<input class="button" type="submit" value="Submit"  id="input-submit">
-		</form>
-	</div>
-<header>
-    <label  id="dark-change"></label>
-  </header>
+			Most recently, I’ve been creating<br> 3d models using Blender and AutoCAD </p>
+			<h2 class="learning">I'm also learning about...</h2>
+			<div class="sub-menu" id="dropDownMenu">
+				<ul>
+					<li>Data Science and Machine Learning</li>
+					<li>Logo design and Branding</li>
+					<li>3d Modeling and Sculpting</li>
+					<li>AutoCAD and Mechanical drawing</li>
+				</ul>  
+			</div>
+		</div>
+		<div>
+			<h2 id="work">WORK</h2>
+			<h1 class="work">Malcolm X</h1>
+			<h5>#Front-end</h5>
+			<p class="link"><a href="https://codepen.io/Mido015/pen/yVxzeQ" target="_blank">My first webpage</a> I built when I was 16 years old, learning about web design,<br> web development, mobile responsive pages and much more.</p>
+			<h1 class="work">Portfolio</h1>
+			<h5>#Full-stack #Bootstrap #jQuery #JavaScript</h5>
+			<p><a href="https://codepen.io/Mido015/pen/yXgrya" target="_blank">My first portfolio website</a> I also made when I was 16, learning more about web development, Bootstrap, jQuery, JavaScript, animations some back-end programming and other cool stuff.</p>
+			<h1 class="work">3d modelling and Mechanical drawing</h1>
+			<h5>#Blender #AutoCAD </h5>
+			<p>I made various 3d models over time, mainly focusing on mechanical drawings using AutoCAD and some models using Blender</p>
+		</div>
+
+
+		<button class="accordion button">Model 1</button>
+<div class="panel">
+  <img style="height: 300px;" src="model.png">
+
+</div>
+
+<button class="accordion button">Model 2</button>
+<div class="panel">
+  <img style="height: 300px;" src="m1.png">
+</div>
+
+<button class="accordion button">Model 3</button>
+<div class="panel">
+  <img style="height: 300px;" src="m2.png">
 </div>
 
 
-</div>
-<button onclick="dark-change"></button>
+		<h3>GET IN TOUCH</h3>
+		<div class="background">
+			<h1 id="contact">Say Hello!</h1>
+			<p>If you’d like to send me a message, I can be reached through various ways! If you prefer email, simply fill out the form below or send me a message directly at <b>mido_husic@hotmail.com</b></p>
+			<div>
+				<form>
+					<input id="contact" type="text" id="input-name" class="sender-name" onfocus="inFocus(this)" placeholder="Name">
+					<input type="email" onfocus="inFocus(this)" id="input-email" placeholder="Email address">
+					<textarea name="message" rows="5" cols="33" type="text" onfocus="inFocus(this)" id="input-message" placeholder="Message"></textarea>
+					<input class="button"  type="submit" value="Submit"  id="input-submit">
+				</form>
+			</div>
+		</div>
 
+	</div>
 </body>
-</html>
+
 
 <style type="text/css">
 
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap");
+	.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+	@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap");
 
 	html {
 		scroll-behavior: smooth;
@@ -165,17 +197,17 @@
 	body {
 		
 		color: #443d3d;
-	  font-family: 'Baloo 2', cursive;
-	  font-size: 24px;
+		font-family: 'Baloo 2', cursive;
+		font-size: 24px;
 		border: 8px solid #ff9d94; 
 		background-color: var(--primary-color);
-		 -ms-overflow-style: none; 
-	scrollbar-width: none;
-	overflow-y: scroll; 
+		-ms-overflow-style: none; 
+		scrollbar-width: none;
+		overflow-y: scroll; 
 	}
 	body::-webkit-scrollbar {
-	display: none;
-} 
+		display: none;
+	} 
 
 	.myName {
 		font-size: 82px;
@@ -188,101 +220,102 @@
 		color: var(--secondary-color);
 		font-weight: bold;
 	}
-	.firstP {
+	
+}
+.work {
+	font-family: lato;
+	font-weight: bold;
+	font-size: 41px;
+	color: var(--secondary-color);
+}
+h5 {
+	font-family: cursive;
+	font-weight: bold;
+	color:#ff6f61 ;
+}
+a:link {
+	color: var(--secondary-color) ;
+	font-weight: bold;
+}
+input {
+	display: block;
+	margin-top: 30px;
+	color: #443d3d;
+	background: #e5dfde;
+	border: none;
+}
+textarea {
+	display: block;
+	margin-top: 30px;
+	color: #443d3d;
+	background: #e5dfde;
+	border: none;
+	resize: none;
+}
+.sender-name {
+	color: #443d3d;
+	background: #e5dfde;
+	border: none;
+}
+.button {
+	font-weight: bold;
+	color: var(--secondary-color);
+}
 
-	}
-	.work {
-		font-family: lato;
-		font-weight: bold;
-		font-size: 41px;
-		color: var(--secondary-color);
-	}
-	h5 {
-		font-family: cursive;
-		font-weight: bold;
-		color:#ff6f61 ;
-	}
-	 a:link {
-color: var(--secondary-color) ;
-font-weight: bold;
-	}
-	input {
-		display: block;
-		margin-top: 30px;
-		color: #443d3d;
-		background: #e5dfde;
-		border: none;
-	}
-	textarea {
-		display: block;
-		margin-top: 30px;
-		color: #443d3d;
-		background: #e5dfde;
-		border: none;
-		resize: none;
-	}
-	.sender-name {
-		color: #443d3d;
-		background: #e5dfde;
-		border: none;
-	}
-	.button {
-		font-weight: bold;
-		color: var(--secondary-color);
-	}
-	 
-	.theme {
-		
-	}
-	.logo {
-		margin: 10px;
-	}
-	.whole {
-		margin: 10%;
-		margin-top: 3%;
-	}
+.logo {
+	margin: 10px;
+}
+.whole {
+	margin: 10%;
+	margin-top: 3%;
+}
 
-	.bullet ul li {
-  list-style: none;
+.bullet ul li {
+	list-style: none;
 }
 .bullet ul li::before {
-  content: "\2022";
-  color: #ff6f61;
-  font-weight: bold;
-  
-  display: inline-block; 
-  width: 16px;
-  margin-left: -16px;
-}
-	@media (max-width: 767px) {
+	content: "\2022";
+	color: #ff6f61;
+	font-weight: bold;
 
-  }
+	display: inline-block; 
+	width: 16px;
+	margin-left: -16px;
+}
+@media (max-width: 767px) {
+	textarea {
+		width: 15em;
+	}
+}
 @media (max-width: 575px) {
-.theme {
-	display: none;
+	.theme {
+		display: none;
 
-}
-.logo {
-	display: none;
+	}
+	textarea {
+		margin-left: 0px;
+	}
+	.logo {
+		display: none;
+	}
+
+	.navbar {
+
+		background-color: var(--primary-color) ;
+		box-shadow:  0px -10px 30px 0px rgba(50, 50, 50, 0.2);
+		position: fixed;
+		bottom: -20px;
+		width: 97%;
+
+	}
 }
 
-.navbar {
-	
-	background-color:#f3f0f0 ;
-	box-shadow:  0px -10px 30px 0px rgba(50, 50, 50, 0.2);
-  position: fixed;
-  bottom: -20px;
-  width: 97%;
-  
-  }
-}
-
- a:hover {
+a:hover {
 	text-decoration: none;
 	color:#ff9d94 ;
 }
-  
- nav ul {
+
+nav ul {
 	width:100%;
 	margin: 0px;
 	padding:0px;
@@ -303,7 +336,7 @@ nav a {
 	display:block;
 	color: var(--secondary-color);
 	font-weight: bold;
-	}
+}
 
 .child1 {
 	width: 15%;
@@ -325,15 +358,16 @@ nav a {
 	.child1{
 		width: 30%;
 	}
-  }
+}
 @media (max-width: 767px) {
 	.child1 {
 		width: 50%;
 	}
-  }
+
+}
 
 .background {
-	background-color: #ff9d94;
+	background-color: var(--tertiary-color);
 	padding: 15px;
 
 }
@@ -351,32 +385,79 @@ nav a {
 
 	background: #121212;
 	text-decoration: overline;
-	  }
+}
 
-	  .button {
-	  	border: none;
-	  	
-	  }
+.button {
+	border: none;
 
-	  :root {
-	  	--primary-color: #f3f0f0;
-	  	--secondary-color: #1d314c;
-	  }
+}
 
-	  body.dark {
-	  	background: #121212;
-	  	color: #ff1;
-	  }
+:root {
+	--primary-color: #f3f0f0;
+	--secondary-color: #1d314c;
+	--tertiary-color: #ff6f61;
+}
 
-	  body.night {
-	  	background: var(--secondary-color);
-	  	background-color: black;
-	  }
+body.dark {
+	background: #121212;
+	color: #ff1;
+} 
+
+body.night{
+	background: #161618;
+	color: #ff6f61;
+	--secondary-color: #0784b5;
+	--tertiary-color: #282828;
+}
+label{
+	position: absolute;
+	margin-top: 25px;
+	margin-right: 75px;
+	width: 45px;
+	height: 22px;
+	right: 20px;
+	top: 20px;
+	border: 2px solid;
+	border-radius: 20px;
+}
+label:before{
+	position: absolute;
+	content: '';
+	width:16px;
+	height: 16px;
+	left: 1px;
+	top: 1px;
+	border-radius: 50%;
+	background: #000;
+	cursor: pointer;
+	transition: 0.4s;
+}
+label.active:before{
+	left: 24px;
+	background: #fff;
+}
 
 
-	</style>
+@media (max-width: 1600px) {
+	label {
+		margin-right: 0px;
+	}
+	@media (max-width: 1200px) {
+		.span1 {
+			display: none;
+		}
+	}
+
+	#wrapper {
+		display: none;
+		height: 100%;
+		width: 100%;
+	}
 
 
+</style>
+
+</html>
 
 
 
