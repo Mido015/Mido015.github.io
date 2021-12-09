@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="script.js"></script>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,54 @@
 	
 </head>
 <body>
+
+<script src="script.js" type="text/javascript">
+
+	function ShowMessage() {
+    alert("Hello World!");
+}
+
+
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+   
+
+	/*const toggleTheme = () => {
+	const container = document.getElementById('page');
+	container.classList.toggle("dark-theme");
+
+	const theme = localStorage.getItem("theme");
+	if (theme === "light" || null) {
+		console.log("set theme to light");
+		localStorage.setItem("theme", "dark");
+
+	}
+	else if (theme = "dark") {
+		localStorage.setItem("theme", "light");
+	}
+
+}
+
+	window.addEventListener("load", () => {
+		const theme = localStorage.getItem("theme");
+
+		if (theme === null) {
+			localStorage.setItem("theme", "light");
+		}
+		if (theme === "dark") {
+			const container = document.getElementById("page");
+			container.classList.add("dark-theme");
+			
+		}
+	}
+
+*/
+</script>
+	
 	<div class="page" id="page">
 	
 
@@ -20,7 +69,7 @@
 				<li><a href="#about">about</a></li>
 				<li><a href="#work">work</a></li>
 				<li><a href="#contact">contact</a></li>
-				<li><button id="dark-change" class="button" onclick="toggleTheme()"  href="logo"><img src="moon.png" alt="theme"> too bright?</button></li>
+				<li><button id="dark-change" class="button" onclick="ShowMessage()"  href="logo"><img src="moon.png" alt="theme"> too bright?</button></li>
 
 			</ul>
 		</nav>
@@ -94,53 +143,15 @@
 			<input class="button" type="submit" value="Submit"  id="input-submit">
 		</form>
 	</div>
+<header>
+    <label  id="dark-change"></label>
+  </header>
+</div>
 
 
 </div>
+<button onclick="dark-change"></button>
 
-<script type="text/javascript">
-
-
-        var content = document.getElementsByTagName('body')[0];
-        var darkMode = document.getElementById('dark-change');
-        darkMode.addEventListener('click', function(){
-            darkMode.classList.toggle('active');
-            content.classList.toggle('night');
-        })
-    </script>
-
-	const toggleTheme = () => {
-	const container = document.getElementById('page');
-	container.classList.toggle("dark-theme");
-
-	const theme = localStorage.getItem("theme");
-	if (theme === "light" || null) {
-		console.log("set theme to light");
-		localStorage.setItem("theme", "dark");
-
-	}
-	else if (theme = "dark") {
-		localStorage.setItem("theme", "light");
-	}
-
-}
-
-	window.addEventListener("load", () => {
-		const theme = localStorage.getItem("theme");
-
-		if (theme === null) {
-			localStorage.setItem("theme", "light");
-		}
-		if (theme === "dark") {
-			const container = document.getElementById("page");
-			container.classList.add("dark-theme");
-			
-		}
-	}
-
-
-</script>
-</div>
 </body>
 </html>
 
@@ -356,7 +367,14 @@ nav a {
 	  	background: #121212;
 	  	color: #ff1;
 	  }
-</style>
+
+	  body.night {
+	  	background: var(--secondary-color);
+	  	background-color: black;
+	  }
+
+
+	</style>
 
 
 
