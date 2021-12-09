@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<script src="script.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 	
 </head>
 <body>
-	
+	<div class="page" id="page">
 	
 
 <div class="navbar">
@@ -20,7 +20,7 @@
 				<li><a href="#about">about</a></li>
 				<li><a href="#work">work</a></li>
 				<li><a href="#contact">contact</a></li>
-				<li><a class="theme" href="logo"><img src="moon.png" alt="theme"> too bright?</a></li>
+				<li><button id="dark-change" class="button" onclick="toggleTheme()"  href="logo"><img src="moon.png" alt="theme"> too bright?</button></li>
 
 			</ul>
 		</nav>
@@ -45,19 +45,19 @@
 			
 	<div class="progress child2">
 
-  <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Python</div>
+  <div class="progress-bar" role="progressbar" style="background: purple; width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">Python</div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Javascript</div>
+<div class="progress child2">
+  <div class="progress-bar" role="progressbar" style="background:  #b3b300; width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Javascript</div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Java</div>
+<div class="progress child2">
+  <div class="progress-bar" role="progressbar" style="background: orange; width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Java</div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">CSS</div>
+<div class="progress child2">
+  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">CSS</div>
 </div>
-<div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">HTML</div>
+<div class="progress child2">
+  <div class="progress-bar" role="progressbar" style="background: darksalmon;width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML</div>
 </div>
 
 		<p class="firstP"><br>I’m a front-end developer who loves building user-friendly websites and web apps,<br> enjoys UI/UX design and loves helping people.
@@ -80,7 +80,7 @@
 		<p><a href="https://codepen.io/Mido015/pen/yXgrya" target="_blank">My first portfolio website</a> I also made when I was 16, learning more about web development, Bootstrap, jQuery, JavaScript, animations some back-end programming and other cool stuff.</p>
 		<h1 class="work">3d modelling and Mechanical drawing</h1>
 		<h5>#Blender #AutoCAD </h5>
-		<p>I made various <a href="url">3d models</a> over time, mainly focusing on mechanical drawings using AutoCAD and some models using Blender</p>
+		<p>I made various <img class="" src="">3d models</a> over time, mainly focusing on mechanical drawings using AutoCAD and some models using Blender</p>
 	</div>
 	<h3>GET IN TOUCH</h3>
 	<div class="background">
@@ -94,7 +94,52 @@
 			<input class="button" type="submit" value="Submit"  id="input-submit">
 		</form>
 	</div>
+
+
 </div>
+
+<script type="text/javascript">
+
+
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
+
+	const toggleTheme = () => {
+	const container = document.getElementById('page');
+	container.classList.toggle("dark-theme");
+
+	const theme = localStorage.getItem("theme");
+	if (theme === "light" || null) {
+		console.log("set theme to light");
+		localStorage.setItem("theme", "dark");
+
+	}
+	else if (theme = "dark") {
+		localStorage.setItem("theme", "light");
+	}
+
+}
+
+	window.addEventListener("load", () => {
+		const theme = localStorage.getItem("theme");
+
+		if (theme === null) {
+			localStorage.setItem("theme", "light");
+		}
+		if (theme === "dark") {
+			const container = document.getElementById("page");
+			container.classList.add("dark-theme");
+			
+		}
+	}
+
+
+</script>
 </div>
 </body>
 </html>
@@ -112,7 +157,7 @@
 	  font-family: 'Baloo 2', cursive;
 	  font-size: 24px;
 		border: 8px solid #ff9d94; 
-		background-color: #f3f0f0;
+		background-color: var(--primary-color);
 		 -ms-overflow-style: none; 
 	scrollbar-width: none;
 	overflow-y: scroll; 
@@ -125,11 +170,11 @@
 		font-size: 82px;
 		font-family: lato;
 		font-weight: bold;
-		color: #1d314c;
+		color: var(--secondary-color);
 		margin-top: 5%;
 	}
 	.learning {
-		color: #1d314c;
+		color: var(--secondary-color);
 		font-weight: bold;
 	}
 	.firstP {
@@ -139,7 +184,7 @@
 		font-family: lato;
 		font-weight: bold;
 		font-size: 41px;
-		color: #1d314c;
+		color: var(--secondary-color);
 	}
 	h5 {
 		font-family: cursive;
@@ -147,7 +192,7 @@
 		color:#ff6f61 ;
 	}
 	 a:link {
-color:#1d314c ;
+color: var(--secondary-color) ;
 font-weight: bold;
 	}
 	input {
@@ -172,7 +217,7 @@ font-weight: bold;
 	}
 	.button {
 		font-weight: bold;
-		color: #1d314c;
+		color: var(--secondary-color);
 	}
 	 
 	.theme {
@@ -245,7 +290,7 @@ nav a {
 	text-align:center;
 	margin:0; 
 	display:block;
-	color: #1d314c;
+	color: var(--secondary-color);
 	font-weight: bold;
 	}
 
@@ -261,6 +306,7 @@ nav a {
 .child2 {
 	width: 50%;
 	display: inline-block;
+	background: lightslategrey;
 	
 }
 
@@ -280,4 +326,39 @@ nav a {
 	padding: 15px;
 
 }
+
+.dark-theme {
+	--primary-color: #023c57;
+	--secondary-color: #f3f3f3;
+}
+
+.page {
+	background-color: ;
+}
+
+.dark {
+
+	background: #121212;
+	text-decoration: overline;
+	  }
+
+	  .button {
+	  	border: none;
+	  	
+	  }
+
+	  :root {
+	  	--primary-color: #f3f0f0;
+	  	--secondary-color: #1d314c;
+	  }
+
+	  body.dark {
+	  	background: #121212;
+	  	color: #ff1;
+	  }
 </style>
+
+
+
+
+
